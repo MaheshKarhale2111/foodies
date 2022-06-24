@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+header a:hover {
+  text-decoration: none;
+  color: var(--primary-color) !important;
+  /* background-color: aqua; */
+}
+
+:root {
+  --primary-color: #c42033;
+  --secondary-color: #43121d;
+  --thired-color: #f98169;
+  --white-color: #fff;
+  --text-color: #555;
+  --text-gray: #999;
+  --black-color: #000;
+  --primary-font: 'Roboto', sans-serif;
+  --secondry-font: 'Quicksand', sans-serif;
+}
+
+html {
+  /* // understand the difference between html and body */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 100%;
+  /* For fonts, setting font-size: 100% will make your text 100% of the base font size set in the browser. Most browsers default to a 16px base font size, so 100% of that would be 16px , and 50% would be 8px  */
+  font-weight: 400;
+}
+
+/* ==================================
+        Scrollbar design 
+================================ */
+
+
+
+::-webkit-scrollbar {
+  width: 0.625rem;
+} 
+::-webkit-scrollbar-track {
+  background: var(--white-color); 
+} 
+::-webkit-scrollbar-thumb {
+  background:var(--primary-color); 
+} 
+/* ===========================================
+            Custom CSS design 
+========================================= */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  /* margin-bottom: 3rem; */
+  text-transform: capitalize; /* this will capitalize first letter */
+  color: var(--secondary-color);
+  line-height: 3rem;
+  font-family: var(--secondry-font);
+}
+h4 {
+  font-size: 1.125rem; /* 1 rem = 16 px */
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize; /* this will capitalize first letter */
+  color: var(--secondary-color);
+  line-height: 3rem;
+  font-family: var(--secondry-font);
+}
+h5 {
+  color: var(--primary-color);
+  text-transform: capitalize;
+  font-family: var(--secondry-font);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 1px;
+}
+
+.main-btn {
+  /* padding: 0.625rem 1.875rem; */
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  line-height: 25px;
+  /* border-radius: 0; */
+}
+.white-btn {
+  background-color: var(--white-color);
+  color: var(--text-color);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  box-shadow: 0px 2px 10px -1px rgb(0 0 0 / 19%);
+}
+.main-btn:hover {
+  color: var(--primary-color);
+}
+
+.white-btn:hover {
+  color: var(--primary-color);
+  /* border-color: var(--primary-color); */
+}
+.wrapper {
+  padding-top: 8.25rem;
+  padding-bottom: 8.25rem;
+}
+
+/* ===========================
+header design 
+============================== */
+
+.navigation-wrap {
+  position: fixed;
+  /* postion fixed will reduce length causing stacking of elements */
+  width: 100%;
+  /* left: 0; */
+  z-index: 1000;
+  /* -webkit-transition:all 0.3s ease-out; */
+  transition: all 0.3s ease-out;
+  background-color: var(--white-color);
+}
+.navigation-wrap .nav-item {
+  padding: 0 0.625rem;
+  transition: all 200ms linear;
+}
+
+.top-banner {
+  width: 100%;
+  background: url(../images/top-banner.jpg) no-repeat;
+  background-position: right;
+  /* background-color: aqua; */
+  background-color: white;
+  background-size: cover;
+  padding: 16.875rem 0 9.375rem;
+  background-position: 50% 0%;
+}
+
+.navbar-toggler:focus {
+  outline: unset;
+  border: unset;
+  box-shadow: none;
+}
+.nav-link {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+.navigation-wrap .navbar-brand img {
+  height: 4rem;
+}
+#brand-name {
+  padding-left: 1rem;
+  font-family: cursive;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--primary-color);
+}
+/* .navigation-wrap .main-btn {
+    padding:0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left:0.625rem;
+  }  */
+
+/* Change navbar styling on scroll */
+.scroll-on {
+  box-shadow: 0 0.125rem 1.75rem 0 rgb(0, 0, 0, 0.1);
+  /*box shadow: xaxis yaxis blur spread color */
+  transition: all 0.15s ease-in-out 0s;
+  /* transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay]; */
+}
+
+/* ==============================
+  Counter section 
+============================== */
+
+#counter {
+  background-color: var(--primary-color);
+  padding: 2.5rem 0;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: var(--white-color) !important;
+  line-height: 3;
+}
+#counter p {
+  color: var(--white-color);
+  text-transform: uppercase;
+}
+
+/* =============================
+  About section design 
+=================================== */
+
+.about-section {
+  background-color: var(--white-color);
+}
+
+.about-section .card,
+.about-section .card img {
+  border-radius: 0.625rem;
+}
+
+.about-section .text-sec {
+  padding-left: 2rem;
+}
+.img-shadow{
+  box-shadow: 0 0.2rem 1.5rem 0 rgb(0, 0, 0, 0.2);
+   /*box shadow: xaxis yaxis blur spread color */
+
+}
+
+/* Food type section design */
+
+/* .food-type {
+  padding-top: 3.25rem;
+} */
+.food-type .card img {
+  border-radius: 0.625rem;
+  height: 800px;
+  object-fit: cover;
+}
+.food-type ul li {
+  color: var(--text-color);
+  margin-left: 30px;
+  line-height: 32px;
+  /* position: relative; */
+}
+/* 
+.food-type ul li::before{
+  /* position: absolute; 
+  left: 2.1875rem;
+  color: var(--primary-color);
+  font-size:1.25rem;
+  font-family: "Font Awesome 5 Free";
+  content: '\f805';
+  font-weight: 900;
+} */
+
+/* use above code or use below one for burger icon 
+but using below one is recommended */
+.fa-burger {
+  color: var(--primary-color);
+  font-weight: 900;
+  font-size: 1.25rem;
+}
+
+/* 
+==============================
+  Story banner 
+============================== */
+
+.story-banner {
+  width: 100%;
+  background: url(../images/food-img-4.jpg) no-repeat;
+  height: 33rem;
+  background-size: cover;
+  background-position: 50% 38%;
+  margin-top: 4rem;
+}
+
+.story-text {
+  padding: 7rem 0rem 10rem;
+}
+.story-text h2 {
+  color: var(--primary-color);
+}
+
+/* ====================================
+Explore food section 
+=============================== */
+
+.explore-food .card {
+  /* border: none; */
+  border-radius: 1rem;
+  background-color: transparent;
+  padding-bottom: 2rem;
+}
+.explore-food .card img {
+  border-radius: 1rem;
+  object-fit: cover;
+}
+.explore-food .card span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+}
+.explore-food .card span del {
+  color: var(--text-color);
+  margin-left: 0.5rem;
+}
+
+/* ======================================
+Testimoanial 
+==================================== */
+
+.testimonial-sec {
+  background-color: var(--primary-color);
+}
+.testimonial-sec .carousel-item {
+  margin-top: 3rem;
+  padding: 10rem 3.125rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+.testimonial-sec .carousel-caption img {
+  max-width: 10rem;
+  border-radius: 50%;
+  padding: 0.3125rem;
+}
+.testimonial-sec .carousel-indicators {
+  bottom: -2.8125rem;
+}
+.testimonial-sec .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  outline: none;
+  border-radius: 50%;
+  border: none;
+  margin-right: 1rem;
+  opacity: 0.2;
+}
+.testimonial-sec .carousel-indicators button.active {
+  opacity: 1;
+}
+
+/* ============================
+  FAQ section 
+======================== */
+
+.faq-section span {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-right: 0.4rem;
+}
+
+/* =================================
+Book food 
+==================================== */
+
+.book-food {
+  /* background-color: aqua; */
+  background: url(../images/parallax-img.jpg) no-repeat;
+  width: 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 5rem 0;
+  background-position: 0 70%;
+}
+.book-food h2 {
+  color: white;
+}
+
+/* ================================
+Newsletter 
+================================ */
+
+.newsletter {
+  width: 55%;
+  margin: 0 auto;
+}
+.newsletter .form-control {
+  height: 3rem;
+  padding: 0 1.2rem;
+  font-size: 0.875rem;
+  width: 100%;
+  /* border: none; */
+  background: transparent;
+  border: 0.1875rem solid var(text-gray);
+  color: var(--black-color);
+  font-weight: 700;
+}
+.newsletter .form-control:hover,
+.newsletter .form-control:focus{
+  outline:none;
+  box-shadow: none;
+  border-color:var(--primary-color);
+}
+
+/* 
+====================================
+    Footer Design 
+================================= */
+
+.footer {
+  background-color: var(--primary-color);
+
+}
+.footer .footer-link {
+  font-size: 1rem;
+  color: var(--white-color);
+  padding : 0 1.875rem;
+  text-decoration: none;
+
+}
+.footer a:hover{
+  color: var(--white-color);
+  font-weight: 600;
+}
+.footer a i{
+  font-size:1.5rem;
+  color: var(--white-color);
+  padding: 0 1rem;
+}
+
+.footer a i:hover{
+  font-size:2rem;
+  font-weight: 600;
+}
